@@ -55,7 +55,7 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
   Future<void> readQuranFile(int index) async {
     String quranText =
         await rootBundle.loadString("assets/files/${index + 1}.txt");
-    lines = quranText.split("\n");
+    lines = quranText.trim().split("\n");
     setState(() {});
   }
 }
