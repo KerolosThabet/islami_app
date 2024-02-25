@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy_app/home/ahadeth_title_widget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import '../ahadeth_model.dart';
 
-import 'ahadeth_model.dart';
+
 
 class AhadethWidget extends StatefulWidget {
 
@@ -27,12 +29,13 @@ class _AhadethWidgetState extends State<AhadethWidget> {
         Container(
           decoration: BoxDecoration(
             border: Border.all(width: 2.5,
-                color: Theme.of(context).colorScheme.primary),
+                color: Theme.of(context).dividerColor),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("الأحاديث",style: TextStyle(fontSize: 25)),
+              Text( AppLocalizations.of(context)!.ahadeth
+                  ,style:Theme.of(context).textTheme.titleLarge),
             ],
           ),
         ),
@@ -48,7 +51,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
                     margin: EdgeInsets.all(5),
                     height: 2,
                     width: 2,
-                    color: Theme.of(context).colorScheme.primary,
+                    color: Theme.of(context).dividerColor,
                   );
                 },
                 itemCount: allAhadeth.length)

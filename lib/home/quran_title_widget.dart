@@ -12,6 +12,7 @@ class QuranTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return InkWell(
       onTap: () {
      Navigator.pushNamed(context, QuranDetailsScreen.route,
@@ -21,8 +22,8 @@ class QuranTitleWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
 
-          Text( Title, style: TextStyle(fontSize: 22)),
-          Text( versesNumber,style: TextStyle(fontSize: 22)),
+          Text( Title, style:  Theme.of(context).textTheme.bodyLarge),
+          Text( versesNumber,style: Theme.of(context).textTheme.bodyLarge ),
         ],
       ),
     );
