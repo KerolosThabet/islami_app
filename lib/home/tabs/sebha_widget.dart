@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class SebhaWidget extends StatefulWidget {
   const SebhaWidget({super.key});
 
@@ -23,7 +23,7 @@ class SebhaWidgetState extends State<SebhaWidget> {
     return Column(
       children: [
         Image(image: AssetImage("assets/images/head_of_seb7a.png")),
-        InkWell(
+        GestureDetector(
           onTap: () {
             setState(() {
               counter++;
@@ -64,7 +64,8 @@ class SebhaWidgetState extends State<SebhaWidget> {
               color: Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(40)),
           child: Text("$counter",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              style: TextStyle(fontSize: 20,color: Colors.black,
+                  fontWeight: FontWeight.bold)),
         ),
         SizedBox(
           height: 20,
